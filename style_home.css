@@ -1,0 +1,43 @@
+html {
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+body * {
+  font-family: "Jost";
+}
+
+#nav_bar {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  width: 100%;
+  background-color: rgb(68, 198, 68);
+  height: 130px;
+  margin: 0 auto;
+  padding: 0;
+}
+#logo_home {
+  position: relative;
+  left: -30px;
+  top: -10px;
+}
+
+#nav_bar > li:not(#logo_home) {
+  padding-left: 150px;
+  padding-top: 50px;
+  font-size: 22px;
+  font-weight: 450;
+}
+li > a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px rgb(106, 106, 106);
+}
+li > a:visited {
+  text-decoration: none;
+  color: white;
+}
