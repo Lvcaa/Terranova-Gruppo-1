@@ -89,7 +89,7 @@ li > a:visited {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: url("img/Sfondo\ Primo\ Div.jpg");
+  background-image: url("../img/Sfondo\ Primo\ Div.jpg");
   background-color: rgba(255, 255, 255, 0.14); /* Adjust the alpha value for the overlay */
   background-blend-mode: overlay; /* Ensure the overlay applies to the image */
   opacity: 0.9; /* Adjust the opacity of the entire element including the background */

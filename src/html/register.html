@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/style_login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="../../img/Logo ClearPay.png" alt="" height="150px" />
+      <h2>Accedi al tuo portale ClearPay</h2>
+      <script src="../js/registration.js"></script>
+
+      <form id="login-form">
+        <div class="input-group">
+          <label for="nome" style="padding-right: 20px">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="input-group">
+          <label for="cognome" style="padding-right: 20px">Cognome</label>
+          <input type="text" id="cognome" name="cognome" required />
+        </div>
+        <div class="input-group">
+          <label for="ragione-sociale" style="padding-right: 20px">Ragione Sociale</label>
+          <input type="text" id="ragione-sociale" name="ragione-sociale" required />
+        </div>
+        <div class="input-group">
+          <label for="partita-iva" style="padding-right: 20px">Partita IVA</label>
+          <input type="text" id="partita-iva" name="partita-iva" required />
+        </div>
+        <div class="input-group">
+          <label for="codice-fiscale" style="padding-right: 20px">Codice Fiscale</label>
+          <input type="text" id="codice-fiscale" name="codice-fiscale" required />
+        </div>
+        <div class="input-group">
+          <label for="style" ="padding-right: 20px">Indirizzo</label>
+          <input type="text" id="indirizzo" name="indirizzo" required />
+        </div>
+        <div class="input-group">
+          <label for="civico" style="padding-right: 20px">Civico</label>
+          <input type="text" id="civico" name="civico" required />
+        </div>
+        <div class="input-group">
+          <label for="cap" style="padding-right: 20px">CAP</label>
+          <input type="text" id="cap" name="cap" required />
+        </div>
+        <div class="input-group">
+          <label for="localita" style="padding-right: 20px">Località</label>
+          <input type="text" id="localita" name="localita" required />
+        </div>
+        <div class="input-group">
+          <label for="provincia" style="padding-right: 20px">Provincia</label>
+          <input type="text" id="provincia" name="provincia" required />
+        </div>
+        <div class="input-group">
+          <label for="nazione" style="padding-right: 20px">Nazione</label>
+          <input type="text" id="nazione" name="nazione" required />
+        </div>
+        <div class="input-group">
+          <label for="numero-telefonico" style="padding-right: 20px">Numero Telefonico</label>
+          <input type="text" id="numero-telefonico" name="numero-telefonico" required />
+        </div>
+        <div class="input-group">
+          <label for="email" style="padding-right: 20px">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+      <div class="footer">Non hai ancora un account? <a href="#">Registrati</a></div>
+    </div>
+  </body>
+</html>
