@@ -1,43 +1,85 @@
 window.onload = function () {
   var inputs = document.querySelectorAll("input");
   inputs.forEach(function (input) {
-    input.setAttribute("onfocusout", "checkInput(this)");
+    input.setAttribute("onfocusout", "createAlertMessage(this)");
   });
   const selects = document.querySelectorAll("select");
 
   selects.forEach((select) => {
-    select.setAttribute("onclick", "checkInput(this)");
+    select.setAttribute("onclick", "createAlertMessage(this)");
   });
   insertNations();
 };
 
-function checkInput(CallingElement) {
-  const inputId = CallingElement.id;
-  switch (inputId) {
-    case "nome":
-    case "cognome":
-    case "ragione-sociale":
-    case "indirizzo":
-    case "civico":
-    case "cap":
-      if (CallingElement.value == 0) {
-        CallingElement.style.borderColor = "red";
-        const parentDiv = CallingElement.parentNode;
-        parentDiv.appendChild(document.createElement("br"));
-        parentDiv.appendChild(document.createTextNode("Inserire parametro valido"));
-      } else {
-      }
-    case "codice-fiscale":
-      checkCodiceFiscale(CallingElement.value, CallingElement);
+function createAlertMessage(callingElement) {
+  const parentDiv = callingElement.parentNode;
+
+  var existingDiv = parentDiv.querySelector(".divInfo");
+  if (existingDiv) {
+    parentDiv.removeChild(existingDiv);
   }
 
-  console.log(inputId);
+  if (callingElement.value == 0) {
+    var divInfo = document.createElement("div");
+    divInfo.classList.add("divInfo");
+    var testoAvviso = document.createElement("p");
+    testoAvviso.classList.add("avviso");
+
+    switch (callingElement.id) {
+      case "nome":
+      case "cognome":
+      case "ragione-sociale":
+      case "indirizzo":
+      case "civico":
+      case "cap":
+        testoAvviso.innerHTML = "Inserisci un parametro valido";
+        break;
+      case "nazione":
+        testoAvviso.innerHTML = "Seleziona una nazione";
+        break;
+      case "codice-fiscale":
+        checkCodiceFiscale(callingElement.value, callingElement);
+        break;
+    }
+
+    callingElement.style.borderColor = "red";
+    divInfo.appendChild(testoAvviso);
+    parentDiv.appendChild(divInfo);
+  } else {
+    callingElement.style.borderColor = "#73e371";
+  }
 }
+
 function checkCodiceFiscale(codice, elemento) {
   if (elemento.value.length < 16) {
     elemento.style.borderColor = "red";
     const parentDiv = elemento.parentNode;
-    parentDiv.appendChild(document.createTextNode("Inserisci il tuo codice fiscale completo"));
+    parentDiv.appendChild(document.createElement("br"));
+
+    var divInfo = document.createElement("div");
+    divInfo.classList.add("divInfo");
+
+    var testoAvviso = document.createElement("p");
+    testoAvviso.innerHTML = "Inserisci un codice fiscale valido ";
+    testoAvviso.classList.add("avviso");
+    divInfo.appendChild(testoAvviso);
+
+    var bottoneInfo = document.createElement("button");
+    bottoneInfo.addEventListener("mouseover", () => {
+      showTooltip(bottoneInfo);
+    });
+    bottoneInfo.addEventListener("mouseout", () => {
+      hideTooltip(bottoneInfo); // Pass the button element to hideTooltip
+    });
+
+    var img = document.createElement("img");
+    img.src = "../../img/question mark.svg";
+    img.style.width = "25px";
+    bottoneInfo.appendChild(img);
+
+    divInfo.appendChild(testoAvviso);
+    divInfo.appendChild(bottoneInfo);
+    parentDiv.appendChild(divInfo);
   } else {
     var alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -58,6 +100,52 @@ function checkCodiceFiscale(codice, elemento) {
     }
   }
 }
+
+function showTooltip(buttonElement) {
+  var tooltipText =
+    "Il codice fiscale è un codice utilizzato ai fini fiscali ed amministrativi per identificare in modo univoco i cittadini italiani. \
+    E' un codice alfanumerico di 16 caratteri, generato da un semplice algoritmo ed introdotto nel 1973 da un decreto del Presidente della Repubblica (Decreto 605 del 29/09/1973) \
+  Per il calcolo del codice fiscale si procede solitamente in questo modo: - le prime tre lettere del codice fiscale sono prese dal cognome (solitamente prima, seconda e terza consonante)\
+  - le seconde tre dal nome (solitamente prima, terza e quarta consonante)\
+  - le ultime due cifre dell'anno di nascita\
+  - una lettera per il mese (A = Gennaio, B, C, D, E, H, L, M, P, R, S, T = Dicembre)\
+  - il giorno di nascita: in caso di sesso femminile si aggiunge 40 per cui è chiaro che se si trova scritto, ad esempio, 52, non può che trattarsi di una donna nata il 12 del mese.\
+  - Codice del comune (quattro caratteri)\
+  - Carattere di controllo, per verificare la correttezza del codice fiscale.";
+
+  var tooltipDiv = document.createElement("div");
+  tooltipDiv.innerHTML = tooltipText.split("-").join("<br>-");
+  tooltipDiv.style.position = "absolute";
+  tooltipDiv.style.backgroundColor = "rgba(255, 255, 255, 0.9)"; // Transparent white background
+  tooltipDiv.style.border = "1px solid black";
+  tooltipDiv.style.padding = "5px";
+  tooltipDiv.style.borderRadius = "5px";
+  tooltipDiv.style.zIndex = "9999";
+
+  // Calculate top and left positions based on scroll direction
+  var buttonRect = buttonElement.getBoundingClientRect();
+  var scrollY = window.scrollY || window.pageYOffset;
+  if (scrollY > window.innerHeight / 2) {
+    // If scrolling down too much, display below the button
+    tooltipDiv.style.top = `${buttonRect.bottom}px`;
+  } else {
+    // If scrolling up too much, display above the button
+    tooltipDiv.style.top = `${buttonRect.top - tooltipDiv.offsetHeight}px`;
+  }
+  tooltipDiv.style.left = `${buttonRect.right}px`;
+
+  document.body.appendChild(tooltipDiv);
+  buttonElement._tooltipDiv = tooltipDiv; // Store reference to the tooltip div
+}
+
+// Function to hide tooltip
+function hideTooltip(buttonElement) {
+  if (buttonElement._tooltipDiv) {
+    buttonElement._tooltipDiv.remove();
+    buttonElement._tooltipDiv = null; // Remove reference to the tooltip div
+  }
+}
+
 function insertNations() {
   select = document.getElementById("nazione");
   var opt = document.createElement("option");
