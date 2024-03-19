@@ -10,7 +10,9 @@ body {
 
 body * {
   font-family: "Jost";
+  scroll-behavior: smooth;
 }
+
 #login-form {
   display: grid;
   grid-template-columns: 400px 400px;
@@ -18,10 +20,11 @@ body * {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
 .login-container {
   background-color: #fff;
   padding: 40px;
-  margin-top: 350px;
+  margin-top: 450px;
   border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
@@ -40,6 +43,7 @@ h2 {
 
 .input-group {
   margin-bottom: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center; /* Center horizontally */
@@ -132,6 +136,39 @@ red-input {
   animation: cursorBlink 1s infinite;
 }
 
-select *{
+select * {
   padding-top: 10px;
+}
+
+@media only screen and (max-width: 930px) {
+  #login-form {
+    display: block; /* Change display to block for column layout */
+    grid-template-columns: unset; /* Remove grid-template-columns property */
+    grid-row: unset; /* Remove grid-row property */
+    grid-row-gap: unset; /* Remove grid-row-gap property */
+  }
+
+  .input-group {
+    width: auto; /* Reset width to auto */
+    margin: 20px; /* Reset margin */
+  }
+}
+
+.input-group > p,
+.divInfo {
+  position: absolute;
+  top: 75%;
+  left: 160px;
+}
+.divInfo > p {
+  opacity: 0.65;
+}
+.divInfo > button {
+  position: absolute;
+  top: 13px;
+  background-color: #ffffff00;
+  left: 225px;
+  opacity: 0.65;
+  cursor: pointer;
+  border-color: #ffffff00;
 }
