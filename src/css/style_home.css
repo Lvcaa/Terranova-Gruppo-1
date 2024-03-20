@@ -1,29 +1,35 @@
 /* Resetting default browser styles */
 html,
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
 }
+
 body {
   font-family: "Lexend Exa";
 }
+
 /* Styling the navbar */
 #nav_bar {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
+  font-weight: 500;
   display: flex;
   justify-content: flex-end; /* Align navbar to the right */
   list-style-type: none;
   place-content: center;
   align-items: center;
-  padding-right: 170px;
+  margin-right: 0; /* Adjusted margin-right */
+  margin-left: auto; /* Adjusted margin-left */
+  margin-top: 0; /* Ensure no top margin */
 }
 
-#nav_bar > li:not(#logo_home, #login) {
-  margin-right: 60px; /* Set spacing between navbar elements */
+#nav_bar > li:not(#logo_home, #login, #a_register) {
+  margin-right: 45px; /* Set spacing between navbar elements */
 }
 
 #login {
-  margin-right: 60px; /* Add spacing for the login section */
+  margin-right: 15px; /* Add spacing for the login section */
 }
 
 #logo_home {
@@ -33,27 +39,21 @@ body {
 /* Styling the links */
 #nav_bar a {
   text-decoration: none;
-  color: black; /* Set link text color to black */
-  font-size: 17px;
+  color: black;
+  font-size: 14px;
   font-weight: 400;
 }
 
-/* Adding hover effect */
-#nav_bar a:hover {
-  transform: translateY(-5px);
-}
-
-/* Styling the social icons */
 #nav_bar_social {
-  display: flex;
+  display: block;
   justify-content: center;
   list-style-type: none;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px; /* Add margin-top for social bar */
   padding: 0;
 }
 
 #nav_bar_social li {
-  margin-right: 20px; /* Adjust spacing between social icons */
+  margin-right: 20px;
 }
 
 #nav_bar_social li:last-child {
@@ -64,22 +64,41 @@ body {
 #login a {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
-  place-content: center;
-  color: black; /* Set login button text color to black */
-  font-size: 17px;
+  color: black;
+  font-size: 14px;
   font-weight: 400;
   border-radius: 100px;
   text-align: center;
-  background-color: #54a3bb;
-  width: 150px;
-  height: 60px;
+  background-color: white; /* Set background color to white */
+  border: 2px solid #58e042; /* Set border color to green */
+  width: 120px;
+  height: 40px;
 }
 
 #login_img {
   height: 30px;
-  margin-left: 10px; /* Adjust spacing between login text and image */
+  margin-left: 10px;
 }
+
+#a_register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #58e042;
+  width: auto; /* Set width to auto */
+  min-width: 120px; /* Set minimum width to ensure it's clickable */
+  height: 40px;
+  margin-right: 100px;
+}
+
 #titolo_banner {
   position: relative;
   padding-top: 65px;
@@ -87,6 +106,7 @@ body {
   font-weight: 450;
   left: 100px;
 }
+
 #paragrafo_banner {
   position: relative;
   font-size: 40px;
@@ -94,18 +114,29 @@ body {
   font-weight: 450;
   left: 100px;
 }
+
 /* Styling the #1 part */
 #paragrafo_banner span {
   font-weight: bold;
   color: gold;
   text-shadow: 1px 1px 3px black;
 }
+
 .social_bar {
   position: relative;
-
-  left: 400px;
+  padding-right: 50px;
+  margin-top: 20px; /* Add margin-top for social bar */
 }
+
 .social_bar > img {
-  margin-right: 75px;
-  border-radius: 15px;
+  margin-right: 25px;
+  border-radius: 10px;
+}
+
+#people1 {
+  position: relative;
+  float: right;
+  margin: 0;
+  padding: 0; /* Added to remove any padding */
+  width: 650px;
 }
