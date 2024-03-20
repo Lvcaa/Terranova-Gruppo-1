@@ -85,7 +85,7 @@ h2 {
     border-color: #ccc;
   }
   50% {
-    border-color: #007bff;
+    border-color: #58e042;
   }
   100% {
     border-color: #ccc;
@@ -93,7 +93,7 @@ h2 {
 }
 
 .btn-login {
-  background-color: #007bff;
+  background-color: #58e042;
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -129,7 +129,7 @@ red-input {
 
 .input-group select:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #58e042;
 }
 
 .input-group select:hover {
