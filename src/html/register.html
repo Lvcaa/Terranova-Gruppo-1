@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="login-container">
-      <h1 class="title"><span class="clear">Clear</span>Pay</h1>
+      <a class="title" href="../php/index.php"><span class="clear">Clear</span>Pay</a>
       <h2>Crea il tuo portale ClearPay</h2>
       <h3>Inserisci i tuoi dati personali, e clicca su "Registrati" per ultimare la registrazione</h3>
       <p>Nota: E' necessario compilare ogni singolo campo sottostante.</p>
@@ -70,11 +70,19 @@
           <label for="email" style="padding-right: 20px">Email</label>
           <input type="email" id="email" name="email" required />
         </div>
+        <div class="input-group">
+          <label for="password" style="padding-right: 20px">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
         <br />
-        <button type="submit" class="btn-login">Registrati</button>
       </form>
-
+      <button type="submit" id="submitButton" class="btn-login">Registrati</button>
       <div class="footer">Non hai ancora un account? <a href="#">Registrati</a></div>
     </div>
+    <script>
+      document.getElementById("submitButton").addEventListener("click", function () {
+        document.getElementById("login-form").submit();
+      });
+    </script>
   </body>
 </html>
