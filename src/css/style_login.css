@@ -108,3 +108,8 @@ h2 {
 red-input {
   border-color: red;
 }
+a.title {
+  text-decoration: none !important; /* Remove text decoration */
+  color: inherit !important; /* Inherit color from parent */
+  font-weight: 600;
+}

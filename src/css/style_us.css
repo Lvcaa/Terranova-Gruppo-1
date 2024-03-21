@@ -1,0 +1,233 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lexend Exa";
+}
+.navBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav_bar {
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  margin-left: 300px;
+  margin-top: 40px;
+}
+.social_bar {
+  position: relative;
+  padding-right: 50px;
+}
+#nav_bar > li:not(#logo_home, #login, #a_register) {
+  margin-right: 45px;
+}
+
+#login {
+  margin-right: 15px;
+}
+
+#logo_home {
+  margin-right: auto;
+}
+
+#nav_bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 5 00;
+}
+
+#nav_bar_social li {
+  margin-right: 20px;
+}
+
+#nav_bar_social li:last-child {
+  margin-right: 0;
+}
+
+#login a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #58e042;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #58e042;
+  min-width: 100px;
+  height: 37px;
+}
+
+#login_img {
+  height: 40px;
+  margin-left: 10px;
+}
+
+#a_register a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #58e042;
+  width: auto;
+  min-width: 100px;
+  height: 40px;
+  /* margin-right: 100px; */
+}
+
+.social_bar {
+  position: relative;
+  padding-right: 50px;
+}
+
+.social_bar > img {
+  margin-right: 25px;
+  border-radius: 6px;
+}
+.clear {
+  color: #58e042;
+}
+.title {
+  font-size: 48px;
+}
+#us {
+  width: 100%;
+}
+.divImmagine {
+  background-image: url("../../img/people us.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs {
+  position: relative;
+  font-size: 62px;
+}
+.usParagraph {
+  color: white;
+  font-size: 24px;
+}
+.projectManager {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.theTeam {
+  padding-top: 40px;
+  font-size: 46px;
+}
+.pj {
+  padding-top: 20px;
+  font-size: 18px;
+}
+.Luca {
+  font-size: 16px;
+  padding-top: -20px;
+}
+.personContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personContact a {
+  text-decoration: none;
+  color: black;
+  position: relative; /* Necessary for absolute positioning */
+}
+
+.personContact a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value to change the distance of the underline */
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.4s ease; /* Animation duration and timing function */
+}
+
+.personContact a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+.green-line {
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 700px;
+  height: 5px;
+  background-color: #58e042;
+}
+.titoloAreaTecnica {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.areaTecnica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personContainerArea {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.personContainerArea a {
+  text-decoration: none;
+  color: black;
+  position: relative; /* Necessary for absolute positioning */
+  font-size: 14px;
+}
+
+.personContainerArea a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value to change the distance of the underline */
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.4s ease; /* Animation duration and timing function */
+}
+
+.personContainerArea a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+.personContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a.title {
+  text-decoration: none !important; /* Remove text decoration */
+  color: inherit !important; /* Inherit color from parent */
+  font-weight: 600;
+}

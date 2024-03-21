@@ -3,9 +3,13 @@ body {
   background-color: #f2f2f2;
   margin: 0;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-image: url("../../img/sfondo\ registrazione.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 body * {
   font-family: "Jost";
@@ -20,19 +24,24 @@ body * {
 }
 #login-form {
   display: grid;
-  grid-template-columns: 400px 400px;
-  grid-row: auto auto;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(4, auto); /* Four rows */
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
 
 .login-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   background-color: #fff;
   padding: 40px;
-  margin-top: 450px;
+  margin-top: 200px;
   border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: auto;
+  width: 1200px;
+  height: 850px;
   text-align: center;
 }
 
@@ -47,7 +56,7 @@ h2 {
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   position: relative;
   display: flex;
   align-items: center;
@@ -107,6 +116,8 @@ h2 {
   font-size: 16px;
   width: 150px;
   transition: background-color 0.3s ease;
+  margin: 0 auto; /* Added to center horizontally */
+  display: block; /* Added to ensure the button is a block element */
 }
 
 .footer {
@@ -172,4 +183,9 @@ select * {
   opacity: 0.65;
   cursor: pointer;
   border-color: #ffffff00;
+}
+a.title {
+  text-decoration: none !important; /* Remove text decoration */
+  color: inherit !important; /* Inherit color from parent */
+  font-weight: 600;
 }
