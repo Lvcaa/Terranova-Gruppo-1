@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../css/style_home.css" />
+    <link rel="stylesheet" href="../../src/css/style_home.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&family=Source+Code+Pro&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
   </head>
   <body>
     <img id="people1" src="../../img/people collaborating home (1).png" alt="" />
-    <?php require('./components/header.php');?>
+    <?php require('./components/headerHome.php');?>
     <div class="banner">
       <h1 class="title"><span class="clear">Clear</span>Pay</h1>
       <h3 class="subtitle">
@@ -92,7 +92,7 @@
       <div id="div_contacts">
         <h1 class="title2"><span class="clear">Clear</span>Pay</h1>
         <h2 class="contacts">Contacts</h2>
-        <a href="us.html" id="who">Who we are, a brief introduction</a>
+        <a href="us.php" id="who">Who we are, a brief introduction</a> <img id="external_link2" src="../../img/arrow.png" alt="" />
         <div class="separator3"></div>
         <p class="ourselves">
           During our school days, we worked on this project together, pooling our ideas and skills. <br />
