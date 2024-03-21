@@ -11,7 +11,13 @@ body {
 body * {
   font-family: "Jost";
 }
-
+.title {
+  text-align: center;
+  font-size: 62px;
+}
+.clear {
+  color: #58e042;
+}
 .login-container {
   background-color: #fff;
   padding: 40px;

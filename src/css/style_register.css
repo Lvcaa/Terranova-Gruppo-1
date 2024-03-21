@@ -3,16 +3,21 @@ body {
   background-color: #f2f2f2;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   height: 100vh;
 }
-
 body * {
   font-family: "Jost";
   scroll-behavior: smooth;
 }
-
+.title {
+  text-align: center;
+  font-size: 62px;
+}
+.clear {
+  color: #58e042;
+}
 #login-form {
   display: grid;
   grid-template-columns: 400px 400px;
@@ -100,9 +105,10 @@ h2 {
   border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
-  width: 100px;
+  width: 150px;
   transition: background-color 0.3s ease;
 }
+
 .footer {
   margin-top: 20px;
   color: #666;

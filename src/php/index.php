@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,19 +15,7 @@
   </head>
   <body>
     <img id="people1" src="../../img/people collaborating home (1).png" alt="" />
-    <ul id="nav_bar">
-      <div class="social_bar">
-        <img src="../../img/instagram.png" alt="" />
-        <img src="../../img/twitter.png" alt="" />
-        <img src="../../img/linkedin.png" alt="" />
-      </div>
-      <li><a href="">About</a></li>
-      <li><a href="">Our Services</a></li>
-      <li><a href="">Partners</a></li>
-      <li><a href="">Contacts</a></li>
-      <li id="login"><a href="login.html">Login</a></li>
-      <li id="a_register"><a href="register.html">Register</a></li>
-    </ul>
+    <?php require('./components/header.php');?>
     <div class="banner">
       <h1 class="title"><span class="clear">Clear</span>Pay</h1>
       <h3 class="subtitle">
@@ -42,7 +31,6 @@
         <a class="vision" href="vision.html">Explore our vision</a>
         <img id="external_link" src="../../img/external link.png" alt="" />
       </div>
-
       <div class="collaborators">
         <img id="eni" src="../../img/eni.svg" alt="" />
         <img src="../../img/agsm.png" alt="" />
@@ -99,7 +87,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.0.2/chartjs-plugin-annotation.min.js"></script>
 
       <canvas id="myChart" width="950" height="450"></canvas>
-
       <script src="../js/graph.js"></script>
 
       <div id="div_contacts">
