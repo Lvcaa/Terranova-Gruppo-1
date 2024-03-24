@@ -1,0 +1,385 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lexend Exa";
+}
+.navBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav_bar {
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  margin-left: 700px;
+  margin-top: 40px;
+}
+.social_bar {
+  position: relative;
+  padding-right: 50px;
+}
+#nav_bar > li:not(#logo_home, #login, #a_register) {
+  margin-right: 45px;
+}
+
+#login {
+  margin-right: 15px;
+}
+
+#logo_home {
+  margin-right: auto;
+}
+.navBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav_bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#nav_bar_social li {
+  margin-right: 20px;
+}
+
+#nav_bar_social li:last-child {
+  margin-right: 0;
+}
+a.title {
+  text-decoration: none !important; /* Remove text decoration */
+  color: inherit !important;
+  font-weight: 600;
+}
+#login a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #58e042;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #58e042;
+  min-width: 100px;
+  height: 37px;
+}
+
+#login_img {
+  height: 40px;
+  margin-left: 10px;
+}
+
+#a_register a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #58e042;
+  width: auto;
+  min-width: 100px;
+  height: 40px;
+}
+
+.social_bar {
+  position: relative;
+  padding-right: 50px;
+}
+
+.social_bar > img {
+  margin-right: 25px;
+  border-radius: 6px;
+}
+.clear {
+  color: #58e042 !important;
+}
+.title {
+  font-size: 48px;
+}
+
+.allThingsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 500px;
+}
+.allThingsContainer h2 {
+  font-size: 42px;
+}
+
+.welcomeContainer {
+  margin-top: 100px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+}
+.welcomeContainer h2 {
+  font-size: 42px;
+  height: 5px;
+}
+
+.allThingsContainer p {
+  font-size: 22px;
+  padding-left: 25px;
+  margin-left: 0;
+}
+.activeContracts .line {
+  width: 900px;
+  height: 2.5px !important;
+}
+.carbCalc h2 {
+  height: 30px;
+}
+.closing_line {
+  width: 105%;
+  height: 2.5px;
+  border-radius: 30px;
+  background-color: #565656;
+  border: clear;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+.activeContracts h2:not(.contractDate) {
+  padding-top: 75px;
+}
+.contract {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contract h2,
+h3 {
+  color: #565656;
+}
+.contract a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 25px;
+}
+.contractDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contractDetails img {
+  padding-left: 13px !important;
+  opacity: 0.6;
+}
+.contractDetails a {
+  font-family: "Inter";
+  color: #565656;
+  font-weight: 500;
+  padding-bottom: 0 !important;
+  padding-right: 10px !important;
+  position: relative;
+  text-decoration: none;
+}
+
+.contractDetails a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  transition: width 0.5s ease;
+}
+.graphContainer {
+  padding-left: 100px;
+  padding-top: 100px;
+}
+.contractDetails a:hover::after {
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.contractDetails a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #000000;
+  animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideBack {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.contractDetails a:not(:hover)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #000000;
+  animation: slideBack 0.4s forwards;
+}
+.contractDetails img {
+  width: 26px;
+}
+.contractTitle {
+  height: 30px;
+}
+.contractDate {
+  height: 15px;
+}
+.lastInstalment {
+  font-size: 22px;
+  font-weight: 400;
+  height: 15px;
+}
+.contractDate {
+  font-size: 20px !important;
+  font-weight: 400;
+}
+.boxMenu {
+  position: fixed;
+  top: 200px;
+  left: -30px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: fit-content;
+  border-radius: 25px;
+}
+.boxMenu * {
+  font-family: "Readex Pro", sans-serif;
+  color: #565656;
+}
+.boxMenu > h1 {
+  color: black !important;
+}
+.boxMenu > h2 {
+  font-size: 16.5px;
+  font-weight: 400;
+  margin-right: 210px;
+}
+.imgColumn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+.imgColumn > img:not(:first-child) {
+  padding-top: 30px;
+}
+.optionContainer img {
+  width: 100%;
+  height: auto;
+  max-width: 34px;
+}
+.optionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding-top: 13px;
+}
+.optionContainer p {
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 20px;
+  text-align: left;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.userInfo p {
+  margin: 2px;
+}
+.menuContainer {
+  margin-top: -13px;
+  margin-left: 2px;
+}
+.contractsNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #58e042;
+  min-width: 60px;
+  height: 25px;
+  padding-left: 0 !important;
+  margin-left: 20px !important;
+}
+.line {
+  width: 100%;
+  height: 1.5px;
+  border-radius: 30px;
+  background-color: #565656;
+  border: clear;
+  margin: 10px 0;
+}
+.selctContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 13vh; /* Move down by 50% of the viewport height */
+  transform: translateY(-50%); /* Move up by 50% of its own height */
+}
+
+.selectionBox {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 40px;
+  border-radius: 16px;
+  border: #00000000;
+}

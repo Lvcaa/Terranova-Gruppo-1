@@ -10,7 +10,5 @@
       <li><a href="">Our Services</a></li>
       <li><a href="">Partners</a></li>
       <li><a href="">Contacts</a></li>
-      <!-- inserire IF ELSE -->
-      <li id="a_register"><a href="../html/register.html">Register</a></li>
   </ul>
 </div>
