@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
               title: {
                 display: true,
                 text: "kg CO2/yr",
+                font: {
+                  weight: "bold",
+                },
               },
             },
           },
@@ -70,3 +73,5 @@ function toggleInitialText(selectElement) {
     initialTextOption.style.display = "none";
   }
 }
+
+function displayPlan() {}
