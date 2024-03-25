@@ -72,7 +72,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.0.2/chartjs-plugin-annotation.min.js"></script>
             <script src="../js/smallgraph.js"></script>
-            <?php requPire('./components/contract.php');?>
+            <?php require('./components/contract.php');?>
             <?php require('./components/contract.php');?>
             <?php require('./components/contract.php');?>
             <?php require('./components/contract.php');?>
@@ -83,13 +83,39 @@
             <h2><span class="clear">Carb</span> Calc</h2>
             <p>Your one-stop solution for effortlessly <br> calculating your carbon footprint."</p>
             <div class="selctContainer">
-            <select name="piano" id="selectPlan" class="selectionBox" onchange="toggleInitialText(this)">
+            <select name="piano" id="selectPlan" class="selectionBox" onchange="displayPlan()">
               <option value="" disabled selected hidden>SELECT A PLAN</option>
               <option value="option1">----------------</option>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
+            </div>
+            <?php require('./components/contract.php');?>
+            <div class="buttonsContainer">
+              <button class="contractAction" id="button1">EDIT CONTRACT</button>
+              <button class="contractAction" id="button2" >DELETE SUBSCRIPTION</button>
+            </div>
+          </div>
+          <div class="payBills">
+            <div class="closing_line"></div>
+            <h2><span class="clear">Pay yo</span>ur Bills</h2>
+            <p>Select a plan below to pay for, if you wish <br>
+            not to pay here, all your plans fees will be charged on the <br> 
+            last day on the month, an email by the system will be sent to <br> 
+            your account's email address.</p>
+            <div class="selctContainer">
+            <select name="piano" id="selectPlan" class="selectionBox" onchange="displayPlan()">
+              <option value="" disabled selected hidden>SELECT A PLAN</option>
+              <option value="option1">----------------</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+            </div>
+            <?php require('./components/contract.php');?>
+            <div class="buttonPayContainer">
+              <button class="pay">Pay</button>
             </div>
           </div>
         </div>
