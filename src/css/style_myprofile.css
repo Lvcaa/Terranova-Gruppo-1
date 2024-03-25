@@ -147,6 +147,12 @@ a.title {
   width: 900px;
   height: 2.5px !important;
 }
+.carbCalc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .carbCalc h2 {
   height: 30px;
 }
@@ -371,7 +377,6 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 200px;
   margin-top: 13vh; /* Move down by 50% of the viewport height */
   transform: translateY(-50%); /* Move up by 50% of its own height */
 }
@@ -382,4 +387,54 @@ h3 {
   height: 40px;
   border-radius: 16px;
   border: #00000000;
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.buttonsContainer button {
+  font-family: "Lexend Exa";
+  font-weight: 600;
+}
+.buttonsContainer button:hover {
+  cursor: pointer;
+}
+.contractAction {
+  width: 300px;
+  height: 50px;
+  border-radius: 24px;
+  border: #00000000;
+}
+#button1 {
+  margin-right: 225px;
+  background-color: #3ea92d;
+}
+#button2 {
+  background-color: #c83535;
+}
+.payBills .closing_line {
+  width: 1050px;
+}
+.buttonPayContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 80px;
+  margin-right: 120px;
+  margin-bottom: 80px;
+}
+.pay {
+  font-size: 20px;
+  font-family: "Lexend Exa";
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  border: #00000000;
+  width: 200px;
+  height: 40px;
+  border-radius: 18px;
+}
+.pay:hover {
+  cursor: pointer;
 }
