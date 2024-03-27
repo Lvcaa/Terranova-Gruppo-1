@@ -59,7 +59,7 @@ body {
   margin-right: 0;
 }
 a.title {
-  text-decoration: none !important; /* Remove text decoration */
+  text-decoration: none !important;
   color: inherit !important;
   font-weight: 600;
 }
@@ -377,8 +377,8 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 13vh; /* Move down by 50% of the viewport height */
-  transform: translateY(-50%); /* Move up by 50% of its own height */
+  margin-top: 13vh; 
+  transform: translateY(-50%); 
 }
 
 .selectionBox {
