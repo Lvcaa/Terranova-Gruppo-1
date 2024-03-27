@@ -22,10 +22,16 @@ body * {
 .clear {
   color: #58e042;
 }
+.login-container h3 {
+  height: 10px;
+}
+.login-container h2 {
+  height: 10px;
+}
 #login-form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  grid-template-rows: repeat(4, auto); /* Four rows */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(4, auto); 
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
@@ -41,7 +47,7 @@ body * {
   border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 1200px;
-  height: 850px;
+  height: 820px;
   text-align: center;
 }
 
@@ -60,25 +66,25 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center horizontally */
+  justify-content: center; 
   text-align: left;
 }
 
 .input-group label {
   display: inline-block;
-  width: 100px; /* Adjust the width as needed */
+  width: 100px; 
   text-align: right;
   margin-right: 10px;
   color: #666;
   font-weight: bold;
 }
 .input-group input {
-  width: calc(80% - 110px); /* Adjust the width minus label width and margin */
+  width: calc(80% - 110px); 
   padding: 10px;
   border-radius: 15px;
   border: 1px solid #ccc;
   font-size: 16px;
-  transition: border-color 0.3s ease; /* Smooth transition */
+  transition: border-color 0.3s ease; 
 }
 
 .input-group input:focus {
@@ -116,8 +122,8 @@ h2 {
   font-size: 16px;
   width: 150px;
   transition: background-color 0.3s ease;
-  margin: 0 auto; /* Added to center horizontally */
-  display: block; /* Added to ensure the button is a block element */
+  margin: 0 auto; 
+  display: block; 
 }
 
 .footer {
@@ -154,15 +160,15 @@ select * {
 
 @media only screen and (max-width: 930px) {
   #login-form {
-    display: block; /* Change display to block for column layout */
-    grid-template-columns: unset; /* Remove grid-template-columns property */
-    grid-row: unset; /* Remove grid-row property */
-    grid-row-gap: unset; /* Remove grid-row-gap property */
+    display: block; 
+    grid-template-columns: unset;
+    grid-row: unset; 
+    grid-row-gap: unset;
   }
 
   .input-group {
-    width: auto; /* Reset width to auto */
-    margin: 20px; /* Reset margin */
+    width: auto; 
+    margin: 20px; 
   }
 }
 
@@ -185,7 +191,7 @@ select * {
   border-color: #ffffff00;
 }
 a.title {
-  text-decoration: none !important; /* Remove text decoration */
-  color: inherit !important; /* Inherit color from parent */
+  text-decoration: none !important; 
+  color: inherit !important; 
   font-weight: 600;
 }
