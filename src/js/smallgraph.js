@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Get all elements with the class .graphContainer
   var graphContainers = document.querySelectorAll(".graphContainer");
 
-  // Loop through each graphContainer element
   graphContainers.forEach(function (graphContainer) {
-    // Create canvas element
     var canvas = document.createElement("canvas");
-    canvas.id = "myChart"; // Set canvas id for Chart.js to target
+    canvas.id = "myChart"; 
     canvas.width = 550;
     canvas.height = 350;
 
-    // Append canvas to the current graphContainer
     graphContainer.appendChild(canvas);
 
-    // Get canvas context
     var ctx = canvas.getContext("2d");
     var myChart;
 
@@ -52,9 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    createChart(); // Create chart initially
+    createChart();
 
-    // Destroy and recreate chart on window resize
     window.addEventListener("resize", function () {
       if (myChart) {
         myChart.destroy();
@@ -64,10 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 function toggleInitialText(selectElement) {
-  // Get the selected option
   const selectedOption = selectElement.options[selectElement.selectedIndex];
 
-  // Hide the initial text if an option other than the default one is selected
   const initialTextOption = selectElement.querySelector('option[value=""]');
   if (selectedOption !== initialTextOption) {
     initialTextOption.style.display = "none";
