@@ -289,28 +289,23 @@ body {
   position: absolute;
   text-align: right;
   font-size: 22px;
-  left: 30vw;
+  right: 3vw;
   top: 650px;
   color: rgba(255, 255, 255, 1);
 }
 .services-container {
   position: relative;
-}
-.services-container2 {
-  position: relative;
-  margin-top: -650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #CarbonCalc {
-  position: relative;
+  padding-right: 75px;
   font-size: 24px;
-  right: 760px;
-  bottom: 530px;
   text-align: right;
 }
 #service2 {
-  margin-top: 250px;
-  margin-left: 60vw;
   border-radius: 30px;
   width: 500px;
   height: 320px;
@@ -336,8 +331,6 @@ body {
   background-color: #58e042;
 }
 #service1 {
-  margin-top: 250px;
-  margin-left: 120px;
   border-radius: 30px;
   width: 500px;
   height: 320px;
@@ -346,10 +339,8 @@ body {
   width: 4px;
   height: 245px;
   border-radius: 15px;
+  margin-left: 100px;
   background-color: #58e042;
-  position: relative;
-  left: 700px;
-  bottom: 280px;
   transform: translateX(-50%);
 }
 .separator2 {
@@ -357,9 +348,7 @@ body {
   height: 245px;
   border-radius: 15px;
   background-color: #58e042;
-  position: relative;
-  left: 120vh;
-  bottom: 280px;
+  margin-right: 100px;
   transform: translateX(-50%);
 }
 .separator3 {
@@ -378,14 +367,12 @@ body {
 
 #provision {
   width: fit-content;
-  position: relative;
-  left: 780px;
-  bottom: 530px;
   font-size: 24px;
 }
 #example {
   text-align: center;
   position: relative;
+  top: 100px;
   bottom: 344px;
   font-weight: 500;
   z-index: 1;
@@ -394,8 +381,33 @@ body {
   position: relative;
   left: 50.3%;
   transform: translateX(-50%);
-  bottom: 381px;
+  bottom: -59px;
   width: 440px;
   height: 17px;
   background-color: #58e042;
+}
+.provisionContainer {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.provisionContainer p {
+  padding-left: 100px;
+}
+.provision2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+#plot-container {
+  display: block; 
+  margin-top: 700px; 
+}
+
+.services-container2 {
+  position: relative; 
 }
