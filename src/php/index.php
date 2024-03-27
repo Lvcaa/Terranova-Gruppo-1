@@ -54,32 +54,36 @@
     <div class="services-container">
       <div class="third-content">
         <h1 id="services">Our Services</h1>
-        <img src="../../img/1 service.jpeg" alt="" id="service1" />
       </div>
-      <div class="separator"></div>
-      <p id="provision">
-        <b>Gas & Energy Provision:</b><br />
-        As a leading provider of energy solutions, <br />
-        our company offers comprehensive gas and<br />
-        energy provision services, ensuring reliable<br />
-        access to essential resources for our<br />
-        customers' needs. Energizing Futures:<br />
-        <b>Your Trusted Gas and Energy Provider</b>.
-      </p>
+      <div class="provisionContainer">
+        <img src="../../img/1 service.jpeg" alt="" id="service1" />
+        <div class="separator"></div>
+        <p id="provision">
+          <b>Gas & Energy Provision:</b><br />
+          As a leading provider of energy solutions, <br />
+          our company offers comprehensive gas and<br />
+          energy provision services, ensuring reliable<br />
+          access to essential resources for our<br />
+          customers' needs. Energizing Futures:<br />
+          <b>Your Trusted Gas and Energy Provider</b>.
+        </p>
+        
+      </div>
       <div class="green-line"></div>
     </div>
-    <div class="services-container2">
-      <div class="fourth-content">
+     <div class="services-container2">
+      <div class="provision2">  
+        <p id="CarbonCalc">
+          Introducing <b>"CarbonCalc":</b><br />
+          Our company offers a personalized<br />
+          carbon footprint assessment, <br />empowering individuals to track and <br />reduce their environmental impact<br />
+          effectively through intuitive<br />
+          graphics.
+        </p>
+        <div class="separator2"></div>
         <img src="../../img/2 service.jpeg" alt="" id="service2" />
       </div>
-      <div class="separator2"></div>
-      <p id="CarbonCalc">
-        Introducing <b>"CarbonCalc":</b><br />
-        Our company offers a personalized<br />
-        carbon footprint assessment, <br />empowering individuals to track and <br />reduce their environmental impact<br />
-        effectively through intuitive<br />
-        graphics.
-      </p>
+      
       <h1 id="example">Example Of A Graphic</h1>
       <div class="green-line2"></div>
       <div id="plot-container"></div>
