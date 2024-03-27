@@ -38,7 +38,7 @@
             <div class="menuContainer">
               <div class="optionContainer">
                 <img src="../../img/note.png" alt=""> <p>Active Contracts</p>
-                <p class="contractsNumber">10</p>
+                <p class="contractsNumber">5</p>
               </div>
               <div class="optionContainer">
                 <img src="../../img/calc.png" alt=""> <p>CarbCalc</p>
