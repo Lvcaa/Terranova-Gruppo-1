@@ -28,7 +28,7 @@
       <h2 class="pj"><span class="clear">Project</span>Manager</h2>
       <p class="Luca">Luca Galli</p>
       <div class="personContact">
-        <img src="../../img/mail.png" alt="" width="50" style="padding-right: 30px;">
+        <img src="../../img/mail.png" alt="" width="35" style="padding-right: 30px;">
         <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
       </div>
       <div class="green-line"></div>
@@ -40,38 +40,38 @@
 
     <div class="areaTecnica">
       <div class="personContainerArea">
-        <img src="../../img/persone/Luca Galli.png" alt="" width="150" style="padding-top: 20px;">
+        <img src="../../img/persone/user to add.svg" alt="" width="150" style="padding-top: 20px;">
         <h2 class="pj"><span class="clear">Product</span> Manager</h2>
         <p class="Luca">Gabriele Massella</p>
         <div class="personContact">
-          <img src="../../img/mail.png" alt="" width="50" style="padding-right: 15px;">
+          <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
           <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
-        <img src="../../img/persone/Luca Galli.png" alt="" width="150" style="padding-top: 20px;">
+        <img src="../../img/persone/user to add.svg" alt="" width="150" style="padding-top: 20px;">
         <h2 class="pj"><span class="clear">Sviluppatore</span> Software</h2>
         <p class="Luca">Riccardo Sporis</p>
         <div class="personContact">
-          <img src="../../img/mail.png" alt="" width="50" style="padding-right: 15px;">
+          <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
           <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
-        <img src="../../img/persone/Luca Galli.png" alt="" width="150" style="padding-top: 20px;">
+        <img src="../../img/persone/user to add.svg" alt="" width="150" style="padding-top: 20px;">
         <h2 class="pj"><span class="clear">Design Archite</span>ttura Applicativa</h2>
         <p class="Luca">Alessandro Bonfante</p>
         <div class="personContact">
-          <img src="../../img/mail.png" alt="" width="50" style="padding-right: 15px;">
+          <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
           <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
-        <img src="../../img/persone/Luca Galli.png" alt="" width="150" style="padding-top: 20px;">
+        <img src="../../img/persone/user to add.svg" alt="" width="150" style="padding-top: 20px;">
         <h2 class="pj"><span class="clear">Test & </span>Development</h2>
         <p class="Luca">Amir Pecora</p>
         <div class="personContact">
-          <img src="../../img/mail.png" alt="" width="50" style="padding-right: 15px;">
+          <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
           <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
         </div>
       </div>
