@@ -14,24 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Exa:wght@100..900&family=Marcellus&family=Readex+Pro:wght@160..700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="../js/cookie.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        displayUserInfo();
+      });
+    </script>
 </head>
 <body>
-    <?php 
-    session_start();
-
-    // Check if user is logged in
-    if (!isset($_SESSION['user_id'])) {
-        // Redirect to login page or display error message
-        header("Location: login.php");
-        exit();
-    }
-
-    // Access user information from session variables
-    $user_email = $_SESSION['user_email'];
-    $user_name = $_SESSION['user_name'];
-    $user_surname = $_SESSION['user_surname'];
-    ?>
-    
     <?php require('./components/headerLogged.php');?>
         <div class="boxMenu">
           <h1><span class="clear">Clear</span>Pay</h1>
@@ -52,8 +42,8 @@
               <div class="optionContainer">
                 <img src="../../img/user.png" alt="">
                 <div class="userInfo">
-                  <p><?php echo $user_name . ' ' .$user_surname ; ?></p>
-                  <p><?php echo $user_email; ?></p>
+                  <p id="userName"></p>
+                  <p id="userEmail"></p>
                 </div>
               </div>
               <div class="optionContainer">
@@ -63,8 +53,8 @@
         </div>
         <div class="allThingsContainer">
           <div class="welcomeContainer">
-              <h2><span class="clear">Welcome,</span> <?php echo $user_name . ' ' . $user_surname; ?></h2>
-              <p>to your ClearPay portal, here, you can check your <br> active plans and consumes.</p>
+            <h2><span class="clear">Welcome,</span> <span id="userInfos"></span></h2>
+            <p>to your ClearPay portal, here, you can check your <br> active plans and consumes.</p>
           </div>
           <div class="activeContracts">
             <h2><span class="clear">Active</span> Contracts</h2>
