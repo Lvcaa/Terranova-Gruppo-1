@@ -69,7 +69,7 @@ function checkCodiceFiscale(codice, elemento) {
       showTooltip(bottoneInfo);
     });
     bottoneInfo.addEventListener("mouseout", () => {
-      hideTooltip(bottoneInfo); // Pass the button element to hideTooltip
+      hideTooltip(bottoneInfo); 
     });
 
     var img = document.createElement("img");
@@ -116,33 +116,29 @@ function showTooltip(buttonElement) {
   var tooltipDiv = document.createElement("div");
   tooltipDiv.innerHTML = tooltipText.split("-").join("<br>-");
   tooltipDiv.style.position = "absolute";
-  tooltipDiv.style.backgroundColor = "rgba(255, 255, 255, 0.9)"; // Transparent white background
+  tooltipDiv.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
   tooltipDiv.style.border = "1px solid black";
   tooltipDiv.style.padding = "5px";
   tooltipDiv.style.borderRadius = "5px";
   tooltipDiv.style.zIndex = "9999";
 
-  // Calculate top and left positions based on scroll direction
   var buttonRect = buttonElement.getBoundingClientRect();
   var scrollY = window.scrollY || window.pageYOffset;
   if (scrollY > window.innerHeight / 2) {
-    // If scrolling down too much, display below the button
     tooltipDiv.style.top = `${buttonRect.bottom}px`;
   } else {
-    // If scrolling up too much, display above the button
     tooltipDiv.style.top = `${buttonRect.top - tooltipDiv.offsetHeight}px`;
   }
   tooltipDiv.style.left = `${buttonRect.right}px`;
 
   document.body.appendChild(tooltipDiv);
-  buttonElement._tooltipDiv = tooltipDiv; // Store reference to the tooltip div
+  buttonElement._tooltipDiv = tooltipDiv;
 }
 
-// Function to hide tooltip
 function hideTooltip(buttonElement) {
   if (buttonElement._tooltipDiv) {
     buttonElement._tooltipDiv.remove();
-    buttonElement._tooltipDiv = null; // Remove reference to the tooltip div
+    buttonElement._tooltipDiv = null; 
   }
 }
 
