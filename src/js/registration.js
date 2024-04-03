@@ -69,7 +69,7 @@ function checkCodiceFiscale(codice, elemento) {
       showTooltip(bottoneInfo);
     });
     bottoneInfo.addEventListener("mouseout", () => {
-      hideTooltip(bottoneInfo); 
+      hideTooltip(bottoneInfo);
     });
 
     var img = document.createElement("img");
@@ -81,9 +81,49 @@ function checkCodiceFiscale(codice, elemento) {
     divInfo.appendChild(bottoneInfo);
     parentDiv.appendChild(divInfo);
   } else {
-    var alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var alfabeto = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+    ];
     var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var mesi_nascita = ["A", "B", "C", "D", "E", "H", "L", "M", "P", "R", "S", "T"];
+    var mesi_nascita = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "H",
+      "L",
+      "M",
+      "P",
+      "R",
+      "S",
+      "T",
+    ];
     regole_codice = {
       0: alfabeto,
       1: alfabeto,
@@ -138,7 +178,7 @@ function showTooltip(buttonElement) {
 function hideTooltip(buttonElement) {
   if (buttonElement._tooltipDiv) {
     buttonElement._tooltipDiv.remove();
-    buttonElement._tooltipDiv = null; 
+    buttonElement._tooltipDiv = null;
   }
 }
 
@@ -160,4 +200,42 @@ function insertNations() {
     .catch((error) => {
       console.error("Error fetching JSON:", error);
     });
+}
+function createCompanyInputs() {
+  var checkBox = document.getElementById("check");
+  var labelIva = document.getElementById("labelIva");
+  var inputIva = document.getElementById("partita-iva");
+  var labelRagione = document.getElementById("labelRagione");
+  var inputRagione = document.getElementById("ragione-sociale");
+  var labelNazione = document.getElementById("labelnazione");
+  var selectNazione = document.getElementById("nazione");
+  if (checkBox.checked == true) {
+    labelIva.style.display = "block";
+    inputIva.style.display = "block";
+    labelRagione.style.display = "block";
+    inputRagione.style.display = "block";
+    labelNazione.style.display = "block";
+    selectNazione.style.display = "block";
+  } else {
+    labelIva.style.display = "none";
+    inputIva.style.display = "none";
+    labelRagione.style.display = "none";
+    inputRagione.style.display = "none";
+    labelNazione.style.display = "none";
+    selectNazione.style.display = "none";
+  }
+  const form = document.getElementById("login-form");
+  const excludedNames = ["nome", "cognome", "email", "password"];
+
+  // Ottieni tutti gli elementi del form
+  const allElements = form.querySelectorAll("input");
+
+  // Ciclo per ogni elemento
+  for (const element of allElements) {
+    // Controlla se il nome dell'elemento è escluso
+    if (!excludedNames.includes(element.name)) {
+      // Nascondi l'elemento
+      element.style.display = "none";
+    }
+  }
 }

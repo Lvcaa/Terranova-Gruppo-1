@@ -6,6 +6,12 @@ body {
 body {
   font-family: "Lexend Exa";
 }
+.pageContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .navBarContainer {
   display: flex;
   justify-content: center;
