@@ -1,4 +1,7 @@
-<?php require('./components/headerUs.php');?>
+<?php
+  $user_cookie_exists = isset($_COOKIE['user_info']) && !empty($_COOKIE['user_info']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Exa:wght@100..900&family=Marcellus&family=Source+Code+Pro&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <?php if ($user_cookie_exists): ?>
+      <?php require('./components/headerLogged.php');?>
+    <?php else: ?>
+      <?php require('./components/headerUs.php');?>
+    <?php endif; ?>
     <div class="divImmagine">
       <h1 class="aboutUs"><span class="clear">About</span> our Team</h1>
       <p class="usParagraph">
@@ -45,7 +53,7 @@
         <p class="Luca">Gabriele Massella</p>
         <div class="personContact">
           <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
-          <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
+          <a href="mailto:19471@studenti.marconiverona.edu.it">19471@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
@@ -54,7 +62,7 @@
         <p class="Luca">Riccardo Sporis</p>
         <div class="personContact">
           <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
-          <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
+          <a href="mailto:19598@studenti.marconiverona.edu.it">19598@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
@@ -63,7 +71,7 @@
         <p class="Luca">Alessandro Bonfante</p>
         <div class="personContact">
           <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
-          <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
+          <a href="mailto:18549@studenti.marconiverona.edu.it">18549@studenti.marconiverona.edu.it</a>
         </div>
       </div>
       <div class="personContainerArea">
@@ -72,7 +80,7 @@
         <p class="Luca">Amir Pecora</p>
         <div class="personContact">
           <img src="../../img/mail.png" alt="" width="35" style="padding-right: 15px;">
-          <a href="mailto:19413@studenti.marconiverona.edu.it">19413@studenti.marconiverona.edu.it</a>
+          <a href="mailto:21029@studenti.marconiverona.edu.it">21029@studenti.marconiverona.edu.it</a>
         </div>
       </div>
 

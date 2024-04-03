@@ -1,3 +1,6 @@
+<?php
+  $user_cookie_exists = isset($_COOKIE['user_info']) && !empty($_COOKIE['user_info']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,21 +25,33 @@
     </script>
 </head>
 <body>
-    <?php require('./components/headerLogged.php');?>
+    <?php
+    session_start();
+
+    if (!$user_cookie_exists && (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email']) || !isset($_SESSION['user_name']) || !isset($_SESSION['user_surname']))) {
+        header("Location: ../html/login.html");
+        exit();
+    }
+    ?>
+
+    <?php require('./components/headerLoggedProfile.php');?>
         <div class="boxMenu">
           <h1><span class="clear">Clear</span>Pay</h1>
             <div class="menuContainer">
               <div class="optionContainer">
-                <img src="../../img/note.png" alt=""> <p>Active Contracts</p>
+                <img src="../../img/note.png" alt=""> <a href="#active">Active Contracts</a>
                 <p class="contractsNumber">5</p>
               </div>
               <div class="optionContainer">
-                <img src="../../img/calc.png" alt=""> <p>CarbCalc</p>
+                <img src="../../img/calc.png" alt=""> <a href="#carb">CarbCalc</a>
               </div>
               <div class="optionContainer">
-                <img src="../../img/new contract.png" alt=""> <p>New Contract</p>
+                <img src="../../img/new contract.png" alt=""> <a href="#pay">Pay Your Bills</a>
               </div>
-
+              <div class="optionContainer">
+                <img src="../../img/new contract.png" alt=""> <a href="newContract.php">New Contract</a>
+              </div>
+              
               <div class="line"></div>
 
               <div class="optionContainer">
@@ -47,7 +62,7 @@
                 </div>
               </div>
               <div class="optionContainer">
-                <img src="../../img/exit.png" alt=""> <p>Logout</p>
+                <img src="../../img/exit.png" alt=""> <button onclick="clearCookie()">Logout</button>
               </div>
           </div>
         </div>
@@ -57,7 +72,7 @@
             <p>to your ClearPay portal, here, you can check your <br> active plans and consumes.</p>
           </div>
           <div class="activeContracts">
-            <h2><span class="clear">Active</span> Contracts</h2>
+            <a id="active"><span class="clear">Active</span> Contracts</a>
             <div class="line"></div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.0.2/chartjs-plugin-annotation.min.js"></script>
@@ -70,7 +85,7 @@
             <div class="closing_line"></div>
           </div>
           <div class="carbCalc">
-            <h2><span class="clear">Carb</span> Calc</h2>
+            <a id="carb"><span class="clear">Carb</span> Calc</a>
             <p>Your one-stop solution for effortlessly <br> calculating your carbon footprint."</p>
             <div class="selctContainer">
             <select name="piano" id="selectPlan" class="selectionBox" onchange="displayPlan()">
@@ -86,10 +101,10 @@
               <button class="contractAction" id="button1">EDIT CONTRACT</button>
               <button class="contractAction" id="button2" >DELETE SUBSCRIPTION</button>
             </div>
+            <div class="closing_line"></div>
           </div>
           <div class="payBills">
-            <div class="closing_line"></div>
-            <h2><span class="clear">Pay yo</span>ur Bills</h2>
+            <a id="pay"><span class="clear">Pay yo</span>ur Bills</a>
             <p>Select a plan below to pay for, if you wish <br>
             not to pay here, all your plans fees will be charged on the <br> 
             last day on the month, an email by the system will be sent to <br> 

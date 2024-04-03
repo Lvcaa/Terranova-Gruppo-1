@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-right: 0;
-  margin-left: 700px;
+  margin-left: 500px;
   margin-top: 40px;
 }
 .social_bar {
@@ -47,7 +47,7 @@ body {
 #nav_bar a {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -62,6 +62,7 @@ a.title {
   text-decoration: none !important;
   color: inherit !important;
   font-weight: 600;
+  margin-left: 75px;
 }
 #login a {
   display: flex;
@@ -122,8 +123,8 @@ a.title {
   align-items: flex-start;
   margin-left: 500px;
 }
-.allThingsContainer h2 {
-  font-size: 42px;
+.boxMenu a {
+  text-decoration: none;
 }
 
 .welcomeContainer {
@@ -143,9 +144,13 @@ a.title {
   padding-left: 25px;
   margin-left: 0;
 }
+.activeContracts {
+  margin-top: 150px;
+}
 .activeContracts .line {
   width: 900px;
   height: 2.5px !important;
+  margin-top: 100px;
 }
 .carbCalc {
   display: flex;
@@ -156,17 +161,28 @@ a.title {
 .carbCalc h2 {
   height: 30px;
 }
+#carb {
+  padding-top: 100px;
+  font-size: 42px;
+  font-weight: 600;
+}
+#pay {
+  font-size: 42px;
+  font-weight: 600;
+  padding-top: 100px;
+}
 .closing_line {
   width: 105%;
   height: 2.5px;
   border-radius: 30px;
   background-color: #565656;
   border: clear;
-  margin-top: 70px;
+  margin-top: 100px;
   margin-bottom: 10px;
 }
-.activeContracts h2:not(.contractDate) {
-  padding-top: 75px;
+#active {
+  font-size: 42px;
+  font-weight: 600;
 }
 .contract {
   display: flex;
@@ -326,12 +342,25 @@ h3 {
   justify-content: left;
   align-items: center;
   padding-top: 13px;
+  margin-top: 15px;
 }
-.optionContainer p {
+.optionContainer a,
+button,
+.userInfo {
   font-size: 17px;
   font-weight: 300;
-  padding-left: 20px;
+  margin-left: 20px;
   text-align: left;
+}
+.optionContainer a:hover {
+  cursor: pointer;
+}
+.optionContainer button {
+  border: #00000000;
+  background-color: #00000000;
+}
+.optionContainer button:hover {
+  cursor: pointer;
 }
 .userInfo {
   display: flex;
@@ -368,7 +397,7 @@ h3 {
   border-radius: 30px;
   background-color: #565656;
   border: clear;
-  margin: 10px 0;
+  margin: 25px 0;
 }
 .selctContainer {
   position: relative;
@@ -377,8 +406,8 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 13vh; 
-  transform: translateY(-50%); 
+  margin-top: 13vh;
+  transform: translateY(-50%);
 }
 
 .selectionBox {
@@ -403,6 +432,9 @@ h3 {
   cursor: pointer;
 }
 .contractAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 300px;
   height: 50px;
   border-radius: 24px;
@@ -414,6 +446,9 @@ h3 {
 }
 #button2 {
   background-color: #c83535;
+}
+.payBills {
+  padding-top: 100px;
 }
 .payBills .closing_line {
   width: 1050px;
@@ -427,6 +462,9 @@ h3 {
   margin-bottom: 80px;
 }
 .pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   font-family: "Lexend Exa";
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);

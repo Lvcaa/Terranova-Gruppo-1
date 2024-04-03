@@ -37,7 +37,7 @@ body {
 #nav_bar a {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 5 00;
 }
 
@@ -64,7 +64,21 @@ body {
   min-width: 100px;
   height: 37px;
 }
-
+#myprofile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #58e042;
+  font-size: 13px;
+  font-weight: 550;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #58e042;
+  border: 2px solid #58e042;
+  min-width: 100px;
+  height: 37px;
+}
 #login_img {
   height: 40px;
   margin-left: 10px;
@@ -404,10 +418,10 @@ body {
   margin-top: 200px;
 }
 #plot-container {
-  display: block; 
-  margin-top: 700px; 
+  display: block;
+  margin-top: 700px;
 }
 
 .services-container2 {
-  position: relative; 
+  position: relative;
 }

@@ -3,11 +3,13 @@
   <ul id="nav_bar">
       <div class="social_bar">
         <img src="../../img/instagram.png" alt="" width="30px" />
-        <img src="../../img/twitter.png" alt="" width="34px" />
+        <img src="../../img/twitter.png" alt="" width="30px" />
         <img src="../../img/linkedin.png" alt="" width="30px" />
       </div>
+      <li><a href="">New Contract</a></li>
       <li><a href="us.php">About</a></li>
       <li><a href="">Our Services</a></li>
       <li><a href="">Partners</a></li>
+      <li><a href="myProfile.php" id="myprofile">My Profile</a></li>
   </ul>
 </div>

@@ -1,13 +1,10 @@
-function submitForm() {
-  // Retrieve user input values
+function submitFormRegister() {
   let nome = document.getElementById("nome").value;
   let cognome = document.getElementById("cognome").value;
   let email = document.getElementById("email").value;
 
-  // Set cookie with user information
   setCookie("user_info", email, nome, cognome, 1);
 }
-
 function setCookie(cname, email, name, surname, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
@@ -56,7 +53,6 @@ function displayUserInfo() {
   }
 }
 
-// Function to retrieve cookie value by name
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(";");
@@ -70,4 +66,9 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+function clearCookie() {
+  alert("Proceeding to remove cookie...");
+  document.cookie = "user_info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  window.location.href = "../php/index.php";
 }

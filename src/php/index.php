@@ -1,5 +1,4 @@
 <?php
-  // Check if the user's cookie exists
   $user_cookie_exists = isset($_COOKIE['user_info']) && !empty($_COOKIE['user_info']);
 ?>
 
@@ -19,10 +18,12 @@
   </head>
   <body>
     <img id="people1" src="../../img/people collaborating home (1).png" alt="" />
-    <?php require('./components/headerHome.php');?>
     <?php if ($user_cookie_exists): ?>
-      <button onclick="location.href = 'myProfile.php';" class="profile-btn">My Profile</button>
+      <?php require('./components/headerLoggedIndex.php');?>
+    <?php else: ?>
+      <?php require('./components/headerHome.php');?>
     <?php endif; ?>
+
     <div class="banner">
       <h1 class="title"><span class="clear">Clear</span>Pay</h1>
       <h3 class="subtitle">
