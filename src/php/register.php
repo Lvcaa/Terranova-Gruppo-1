@@ -23,20 +23,19 @@
         />
       <div class="full-login-container">
         <div class="topnav">
-          <?php require('./components/headerHome.php');?>
+          <?php require('./components/headerUs.php');?>
         </div>
         <div class="login-container">
           <div class="descrizioneSito">
-            <a class="title" href="../php/index.php"
-              ><span class="clear">Clear</span>Pay</a
-              >
             <h2>Crea il tuo portale ClearPay</h2>
             <h3>
               Inserisci i tuoi dati personali, e clicca su "Registrati"<br> per
               ultimare la registrazione
             </h3>
-            <p>Nota: E' necessario compilare ogni singolo campo sottostante.</p>
+            <p>Con il tuo <b>nuovo account</b> potrai: </p>
+            <?php require('./components/whatCanYouDo.php');?>
           </div>
+          
           <!-- <label for="azienda" style="margin-top: 15px"
             ><b>Sei un'azienda?</b></label
             > -->
@@ -55,7 +54,7 @@
               method="post"
               >
               <div class="input-group">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome *</label>
                 <input
                   placeholder="Inserisci il tuo nome"
                   type="text"
@@ -65,7 +64,7 @@
                   />
               </div>
               <div class="input-group">
-                <label for="cognome">Cognome</label>
+                <label for="cognome">Cognome *</label>
                 <input
                   placeholder="Inserisci il tuo cognome"
                   type="text"
@@ -75,7 +74,7 @@
                   />
               </div>
               <div class="input-group">
-                <label for="email">Email</label>
+                <label for="email">Email *</label>
                 <input
                   placeholder="Inserisci la tua email"
                   type="email"
@@ -85,7 +84,7 @@
                   />
               </div>
               <div class="input-group">
-                <label for="password">Password</label>
+                <label for="password">Password *</label>
                 <input
                   placeholder="Crea una password"
                   type="password"
@@ -182,9 +181,6 @@
               >
             Registrati
             </button>
-            <div class="footer">
-              Non hai ancora un account? <a href="#">Registrati</a>
-            </div>
           </div>
         </div>
       </div>

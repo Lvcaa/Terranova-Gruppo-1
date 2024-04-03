@@ -5,7 +5,7 @@ body {
   height: 100vh;
 }
 body * {
-  font-family: "Jost";
+  font-family: "Inter";
   scroll-behavior: smooth;
 }
 .navBarContainer {
@@ -23,8 +23,7 @@ body * {
   align-items: center;
   justify-content: center;
   margin-right: 0;
-  /* margin-left: 500px;
-  margin-top: 40px; */
+  margin-top: 30px;
 }
 .social_bar {
   position: relative;
@@ -61,10 +60,12 @@ body * {
   margin-right: 0;
 }
 a.title {
+  display: flex;
+  justify-content: center;
   text-decoration: none !important;
   color: inherit !important;
-  font-weight: 600;
-  margin-left: 75px;
+  font-weight: 800 !important;
+  text-align: center !important;
 }
 #login a {
   display: flex;
@@ -118,27 +119,25 @@ a.title {
   padding-left: 0; /* Remove padding from the left */
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 #regWallpaper {
   width: 40vw;
   height: 100vh;
   object-fit: cover;
-
   float: left;
 }
 .descrizioneSito {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .descrizioneSito * {
   padding-bottom: 14px;
 }
 .title {
   text-align: center;
-  font-size: 62px;
+  font-size: 40px;
 }
 .clear {
   color: #58e042;
@@ -158,13 +157,14 @@ a.title {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 100vh;
 }
 .form-container {
   margin-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .full-container {
   display: flex;
@@ -177,7 +177,7 @@ a.title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #fff;
+
   padding: 40px;
   width: 57vw; /* Calculate the remaining width after considering 40vw for #regWallpaper */
   height: 83vh;
@@ -214,14 +214,14 @@ h2 {
 .input-group label {
   display: inline-block;
   width: 100px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   color: #666;
-  font-weight: bold;
+  font-weight: 500;
 }
 .input-group input {
   width: 250px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 16px;
   transition: border-color 0.3s ease;
@@ -253,14 +253,14 @@ h2 {
 }
 
 .btn-login {
-  background-color: #58e042;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 12px 20px;
-  border-radius: 50px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
-  width: 150px;
+  width: auto;
   transition: background-color 0.3s ease;
   display: block;
 }
@@ -313,11 +313,11 @@ select * {
 
 .input-group > p,
 .divInfo {
-  position: absolute;
-  top: 75%;
-  left: 160px;
 }
 .divInfo > p {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 0;
   opacity: 0.65;
 }
 .divInfo > button {
@@ -329,8 +329,23 @@ select * {
   cursor: pointer;
   border-color: #ffffff00;
 }
-a.title {
-  text-decoration: none !important;
-  color: inherit !important;
-  font-weight: 600;
+.doList {
+  display: flex;
+  flex-direction: column;
+}
+.whatudo {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 5px !important;
+  padding-right: 0;
+  margin-right: 0;
+}
+.whatudo > p {
+  font-weight: 500;
+}
+.whatudo > img {
+  padding-right: 20px;
 }
