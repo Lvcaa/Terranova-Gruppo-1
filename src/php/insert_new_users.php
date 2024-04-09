@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($_POST['nome']) && !empty($_POST['cognome']) && !empty($_POST['ragione-sociale']) && !empty($_POST['partita-iva']) && !empty($_POST['codice-fiscale']) && !empty($_POST['indirizzo']) && !empty($_POST['civico']) && !empty($_POST['cap']) && !empty($_POST['localita']) && !empty($_POST['provincia']) && !empty($_POST['nazione']) && !empty($_POST['numero-telefonico']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
+        
         $nome = $conn->real_escape_string($_POST['nome']);
         $cognome = $conn->real_escape_string($_POST['cognome']);
         $ragione_sociale = $conn->real_escape_string($_POST['ragione-sociale']);

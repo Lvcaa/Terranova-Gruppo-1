@@ -9,5 +9,5 @@
   <li><a href="">Partners</a></li>
   <!-- inserire IF ELSE -->
   <li id="login"><a href="../html/login.html">Login</a></li>
-  <li id="a_register"><a href="../html/register.html">Register</a></li>
+  <li id="a_register"><a href="../php/register.php">Register</a></li>
 </ul>

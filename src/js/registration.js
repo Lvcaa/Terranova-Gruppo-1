@@ -9,6 +9,23 @@ window.onload = function () {
     select.setAttribute("onclick", "createAlertMessage(this)");
   });
   insertNations();
+  document.getElementById("codice-fiscale").style.display = "none";
+  document.getElementById("civico").style.display = "none";
+  document.getElementById("cap").style.display = "none";
+  document.getElementById("localita").style.display = "none";
+  document.getElementById("provincia").style.display = "none";
+  document.getElementById("nazione").style.display = "none";
+  document.getElementById("numero-telefonico").style.display = "none";
+  document.getElementById("indirizzo").style.display = "none";
+
+  // Seleziona tutti gli elementi label nella pagina
+  var labels = document.querySelectorAll("label");
+
+  // Itera su ciascun label a partire dal sesto
+  for (var i = 5; i < labels.length; i++) {
+    // Imposta lo stile display su "none" solo per il sesto label in poi
+    labels[i].style.display = "none";
+  }
 };
 
 function createAlertMessage(callingElement) {
@@ -81,49 +98,9 @@ function checkCodiceFiscale(codice, elemento) {
     divInfo.appendChild(bottoneInfo);
     parentDiv.appendChild(divInfo);
   } else {
-    var alfabeto = [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z",
-    ];
+    var alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var mesi_nascita = [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "H",
-      "L",
-      "M",
-      "P",
-      "R",
-      "S",
-      "T",
-    ];
+    var mesi_nascita = ["A", "B", "C", "D", "E", "H", "L", "M", "P", "R", "S", "T"];
     regole_codice = {
       0: alfabeto,
       1: alfabeto,
@@ -238,4 +215,52 @@ function createCompanyInputs() {
       element.style.display = "none";
     }
   }
+}
+function nextStep() {
+  var nome = document.getElementById("nome").value;
+  var cognome = document.getElementById("cognome").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confermapassword").value;
+
+  if (password !== confirmPassword) {
+    alert("Le password non corrispondono. Si prega di controllare e riprovare.");
+    return;
+  }
+
+  // Se le password corrispondono, controlla la validità del modulo
+  if (document.getElementById("login-form").checkValidity()) {
+    document.getElementById("nome").style.display = "none";
+    document.getElementById("cognome").style.display = "none";
+    document.getElementById("email").style.display = "none";
+    document.getElementById("password").style.display = "none";
+    document.getElementById("confermapassword").style.display = "none";
+
+    var labels = document.querySelectorAll("label");
+
+    labels.forEach(function (label) {
+      label.style.display = "none";
+    });
+    document.querySelector(".btn-login").textContent = "Registrati";
+    // Seleziona tutti gli elementi label nella pagina
+    var labels = document.querySelectorAll("label");
+
+    // Itera su ciascun label a partire dal sesto
+    for (var i = 5; i < labels.length; i++) {
+      // Imposta lo stile display su "none" solo per il sesto label in poi
+      labels[i].style.display = "block";
+    }
+
+    document.getElementById("codice-fiscale").style.display = "block";
+    document.getElementById("civico").style.display = "block";
+    document.getElementById("cap").style.display = "block";
+    document.getElementById("localita").style.display = "block";
+    document.getElementById("provincia").style.display = "block";
+    document.getElementById("nazione").style.display = "block";
+    document.getElementById("numero-telefonico").style.display = "block";
+    document.getElementById("indirizzo").style.display = "block";
+  } else {
+    alert("Please fill in all required fields.");
+  }
+  // document.getElementById("login-form").submit();
 }
