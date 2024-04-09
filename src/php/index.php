@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="../../src/css/style_home.css" />
     <link rel="stylesheet" href="../css/style_components.css" />
+    <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&family=Source+Code+Pro&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,38 +61,39 @@
     <div class="services-container">
       <div class="third-content">
         <h1 id="services">Our Services</h1>
+        <p id="subservice">Don't worry, <u style="font-weight:400;">we have everything</u> <span><b>you need.</b></span></p>
       </div>
-      <div class="twoBoxContainer">
-        <div class="provisionContainer">
-          <h1 class="provisionTitle">Gas & Energy Provision</h1>
-          <p id="provision">
-            As a leading provider of energy solutions, 
-            our company offers <br> comprehensive gas and
-            energy provision services, ensuring <br>reliable
-            access to essential resources for our
-            customers' needs.<br> Energizing Futures:
-            <b>Your Trusted Gas and Energy Provider.
+      <div class="threeBoxContainer">
+        <div class="cardContainer" id="card1">
+          <h1 class="cardTitle">Provision</h1>
+          <p class="cardParagraph">
+            Energizing Futures:
+            <br>Your Trusted Gas and Energy Provider.
           </p>
           <div class="bottomPart">
-            <div class="fromPrice">
-              From 15£ Kw/h
-            </div>
+            <p class="from">From 15£ KW/h</p>
             <p class="providers" >Providers :</p>
           </div>
         </div>
-        <div class="carbCalcContainer">
-          <h1 class="provisionTitle">CarbCalc</h1>
-          <p id="provision">
-            Introducing <b>"CarbonCalc":</b>
-            Our company offers a <br> personalized
-            carbon footprint assessment, empowering <br> individuals to track and reduce their environmental impact<br>
-            effectively through intuitive
-            graphics.
+        <div class="cardContainer" id="card2">
+          <h1 class="cardTitle">Provision</h1>
+          <p class="cardParagraph">
+            Energizing Futures:
+            <br>Your Trusted Gas and Energy Provider.
           </p>
           <div class="bottomPart">
-            <div class="fromPrice2">
-              From 15£ Kw/h
-            </div>
+            <p class="from">From 15£ KW/h</p>
+            <p class="providers" >Providers :</p>
+          </div>
+        </div>
+        <div class="cardContainer" id="card3">
+          <h1 class="cardTitle">Provision</h1>
+          <p class="cardParagraph">
+            Energizing Futures:
+            <br>Your Trusted Gas and Energy Provider.
+          </p>
+          <div class="bottomPart">
+            <p class="from">From 15£ KW/h</p>
             <p class="providers" >Providers :</p>
           </div>
         </div>
@@ -113,9 +115,8 @@
           </div> 
           <img src="../../img/agenda.jpg" alt="">
       </div>
-      
-     
-
+    </div>
+    <div class="cards">
     </div>
     <div id="div_contacts">
       <h1 class="title2"><span class="clear">Clear</span>Pay</h1>
@@ -140,4 +141,13 @@
   
   <canvas id="myChart" width="950" height="450"></canvas>
   <script src="../js/graph.js"></script>
+
+
+  <p id="provision">
+            Introducing <b>"CarbonCalc":</b>
+            Our company offers a <br> personalized
+            carbon footprint assessment, empowering <br> individuals to track and reduce their environmental impact<br>
+            effectively through intuitive
+            graphics.
+          </p>
   -->
