@@ -7,7 +7,7 @@
       </div>
       <li><a href="">New Contract</a></li>
       <li><a href="us.php">About</a></li>
-      <li><a href="">Our Services</a></li>
+      <li><a href="#services">Our Services</a></li>
       <li><a href="">Partners</a></li>
       <li><a href="myProfile.php" id="myprofile">My Profile</a></li>
   </ul>

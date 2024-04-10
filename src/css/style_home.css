@@ -9,9 +9,6 @@ body * {
   font-family: "Mona-Sans";
   font-weight: bold;
 }
-#nav_bar {
-  padding-right: 600px;
-}
 #people1 {
   position: absolute;
   right: 0;
@@ -23,21 +20,123 @@ body * {
   object-fit: cover;
 }
 .title {
-  /* position: relative;
-  left: 180px; */
   font-size: 62px;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   color: white;
-  /* top: 10px; */
+  height: 40px;
 }
+
 #div_contacts {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 300px; /* Adjust as needed */
-  padding: 20px 0; /* Adjust vertical padding as needed */
+  align-items: flex-start;
+  margin-top: 300px;
   background-color: #393939;
+  padding-bottom: 75px;
 }
+.enquiryandteam {
+  display: flex;
+  flex-direction: row;
+}
+.contactsParagraph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 100px;
+}
+.enquiryForm {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  align-items: stretch;
+}
+.firstEnquiry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.firstEnquiry label,
+.secondEnquiry label {
+  color: white;
+  font-weight: 500;
+}
+.firstEnquiry input {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  height: 30px; /* Set height to auto */
+  border: #ffffff00;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.secondEnquiry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.secondEnquiry textarea {
+  resize: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  height: auto; /* Set height to auto */
+  font-size: 15px;
+  font-weight: 550;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 25px;
+  flex-grow: 1; /* Allow textarea to grow to fill remaining space */
+}
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+  text-transform: capitalize;
+}
+.teamContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px; /* Adjust as needed */
+  width: 300px; /* Adjust the width of the grid container */
+  height: 100%; /* Set height to match the height of firstEnquiry */
+}
+
+.teamContainer h2 {
+  margin-block-start: 0 !important;
+  color: white;
+}
+.team_member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 350px;
+}
+.team_member h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+.team_member p {
+  color: white;
+  font-weight: 400;
+}
+.team_member b {
+  color: #58e042;
+}
+.memberPicture img {
+  width: 100px;
+  padding-right: 35px;
+}
+
 #myChart {
   position: absolute;
   left: 50%;
@@ -53,14 +152,16 @@ body * {
 }
 
 .title2 {
-  font-size: 62px;
+  font-size: 46px;
+  height: 10px;
   color: white;
   text-align: center;
 }
 
 .contacts {
-  font-size: 32px;
+  font-size: 18px;
   color: white;
+  font-weight: 500 !important;
 }
 
 #who {
@@ -115,6 +216,12 @@ body * {
   display: inline-block;
 }
 .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+}
+.navandbanner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -202,7 +309,7 @@ body * {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 100px;
+  margin-left: 5vw;
 }
 .third-content span {
   color: #58e042;
@@ -283,21 +390,24 @@ body * {
   margin-top: 30px;
   margin-bottom: 0;
 }
+.firstPage {
+  display: flex;
+  flex-direction: row;
+}
 .cardContainer {
   width: 300px;
-  /* height: 451px; */
   border-radius: 25px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../../img/gas.jpg");
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 #card1 {
-  margin-left: 180px;
+  margin-left: 10vw;
 }
 .cardParagraph {
   margin-left: 35px;
@@ -372,8 +482,8 @@ body * {
 }
 .whiteLine {
   margin: auto;
-  margin-top: 100px;
-  border-bottom: 3px solid white;
+  margin-top: 250px;
+  border-bottom: 1px solid white;
   color: white;
   width: 1300px;
   border-radius: 50px;
@@ -382,12 +492,13 @@ body * {
   height: 390px;
   width: 30px;
   background-image: linear-gradient(rgb(1, 174, 1), rgb(42, 42, 42));
-  margin-left: 200px;
+  margin-left: 5vw;
   margin-top: 100px;
   color: white;
   border-radius: 50px;
 }
 .goalSection {
+  margin-top: 150px;
   display: flex;
   flex-direction: row;
 }
@@ -435,4 +546,13 @@ body * {
   margin-left: 30px;
   margin-top: 170px;
   border-radius: 25px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+footer p {
+  font-weight: 400;
 }

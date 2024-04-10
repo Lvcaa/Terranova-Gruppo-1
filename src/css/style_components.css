@@ -7,13 +7,13 @@
   font-family: "Mona Sans";
   font-weight: 500;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   list-style-type: none;
-  place-content: center;
   align-items: center;
   justify-content: center;
-  margin-right: 0;
   margin-top: 30px;
+  margin-left: 5vw;
+  padding-inline-start: 0px !important;
 }
 .social_bar {
   position: relative;
@@ -104,13 +104,13 @@ a.title {
   border-radius: 6px;
 }
 #myprofile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-decoration: none;
-  color: #000000;
+  color: #000000 !important;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700 !important;
   border-radius: 100px;
   text-align: center;
   background-color: white;
