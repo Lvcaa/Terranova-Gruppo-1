@@ -20,6 +20,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Exa:wght@100..900&family=Marcellus&family=Readex+Pro:wght@160..700&family=Source+Code+Pro&display=swap" rel="stylesheet">
       <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet">
       <script src="../js/cookie.js"></script>
+      <script src="../js/myProfile.js"></script>
       <script>
          document.addEventListener('DOMContentLoaded', function() {
            displayUserInfo();
@@ -66,6 +67,7 @@
                         <div class="ButtonContainer">
                            <button class="selectContract">Select Contract</button>
                            <button class="deleteContract">Delete Contract</button>
+                           <button class="newContract">New Contract</button>
                         </div>
                      </div>
                      <div class="contractInfo">
@@ -107,6 +109,7 @@
                         </div>
                      </div>
                   </div>
+                  <h2 style="margin-top:40px">Extend Contract</h2>
                   <div class="calendarContainer">
                      <div class="leftSide">
                         <h1>September 2024</h1>
@@ -121,6 +124,90 @@
                      </div>
                      <div class="daysContainer">
                         <div class="rightSide"> 
+                        </div>
+                     </div>
+                  </div>
+                  <h2 style="margin-top:40px">Sign a new Contract</h2>
+                  <div class="newContract">
+                     <h2>Dati Intestatario</h2>
+                     <div class="parameterContainer">
+                        <div class="input-group">
+                           <label for="nomeIntestatario">Nome Intestatario</label>
+                           <input type="text" class="input-group" name="nomeIntestatario">
+                        </div>
+                        <div class="input-group">
+                           <label for="cognomeIntestatario">Cognome Intestatario</label>
+                           <input type="text" class="input-group" name="cognomeIntestatario">
+                        </div>
+                        <div class="input-group">
+                           <label for="codiceFiscale">Codice Fiscale</label>
+                           <input type="text" class="input-group" name="codiceFiscale">
+                        </div>
+                        <div class="input-group">
+                           <label for="dataDiScadenza">Data di scadenza</label>
+                           <input type="text" class="input-group" name="dataDiScadenza">
+                        </div>
+                     </div>
+                     <div class="whiteLine"></div>
+                     <div class="servicesContainer">
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/agsm.png" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                           <div class="calendar-container"></div>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/eni.svg" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/engie.svg" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/iren.png" style="width:70px; height:45px">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                     </div>
+                     <div class="servicesContainer2">
+                     <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/agsm.png" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/eni.svg" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/engie.svg" alt="">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
+                        </div>
+                        <div class="service">
+                           <h4>Base</h4>
+                           <img src="../../img/iren.png" style="width:70px; height:45px">
+                           <p style="margin-top:20px">Cost per min: 0.60£</p>
+                           <p><b>Type:</b> Gas & Energy</p>
+                           <button class="sign-button">Sign</button>
                         </div>
                      </div>
                   </div>
